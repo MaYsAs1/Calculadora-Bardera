@@ -1,0 +1,121 @@
+body {
+    background-color: #2c3e50; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    gap: 20px;
+}
+
+.calculator {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    width: max-content;
+    padding: 10px;
+    border-radius: 15px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+input {
+    grid-column: span 4;
+    background-color: #34495e;
+    color: white; 
+    font-size: 20px;
+    text-align: right;
+    height: 50px;
+    padding: 5px;
+    border: 2px solid #ecf0f1;
+    box-sizing: border-box;
+
+}
+button {
+    height: 70px;
+    border: 1px solid #ccc;
+    margin: 2px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    border: none;
+    font-size: 25px;
+    background-color: #8e44ad;
+    color: white;
+}
+button:hover {
+    background-color: #9b59b6;
+    transform: scale(1.05);
+}
+#algoritm {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    appearance: none; 
+    margin-bottom: 15px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: none;
+}
+#algoritm::-webkit-inner-spin-button, 
+#algoritm::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+    margin: 0;
+}
+#result {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 0px transparent;
+}
+button:active {
+    background-color: #9b59b6;
+    transform: scale(0.95);
+}
+#equal {
+    background-color: #1abc9c;
+}
+#equal:active {
+    background-color: #16a085;
+    transform: scale(0.95);
+}
+h1 {
+    margin-top: auto;
+    text-align: center;
+    color: #ecf0f1;
+    font-size: 2rem;
+    font-weight: 600;
+}
+#undo {
+    background-color: #e74c3c;
+    border: none;
+}
+#undo:active {
+    transform: scale(0.95);
+    background-color: #c0392b;
+}
+.arriba {
+    height: 50px;
+}
+#popup {
+    position: absolute;
+    left: 50%;
+    top: 400px;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0; 
+    transition: top 0.5s ease, opacity 0.5s ease;
+    z-index: 10;
+}
+#popup.show {
+    top: 300px;
+    opacity: 1;
+}
+#popup.hide {
+    top: 300px;
+    opacity: 0;
+}
